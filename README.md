@@ -1,13 +1,13 @@
 # WGAN-GP
 ## Prerequisites
-python 3.x \<br>
-tensorflow 1.7 \<br>
+### python 3.x 
+### tensorflow 1.7 
 ## take care about the loss
-d_loss = y_generate - y_real \<br>
-g_loss = -y_generate \<br>
+d_loss = y_generate - y_real <br>
+g_loss = -y_generate <br>
 ## penalty
-pen = gradient of interpolates(x - randondom_uniform * difference(x-x_generate))\<br>
-d_loss += 10*(sqrt(tf.reduce_sum(square(pen)-1, reduction_indices=[range(1, generate_dim)])**2\<br>
+pen = gradient of interpolates(x - randondom_uniform * difference(x-x_generate))<br />
+d_loss += 10*(sqrt(tf.reduce_sum(square(pen)-1, reduction_indices=[range(1, generate_dim)])**2
 ## update times
 update discriminator 5 times, update generator once
 ## optimizer
