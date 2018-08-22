@@ -17,9 +17,12 @@ At first, I intend to use the as the parameters of batch_normalization, I do not
 deconv is an important part of generaor
 The discriminator and the generator is highly symmetric. However, it is also fine that discriminator is a little stronger than generator.
 ## training times
-I use a GTX1080Ti, and the generators and the disriminators was different in different data sets
-For MNIST, every 10 thousand iteration is about 120s
-For cifar10, every 10 thousand iteration is about 170s
+I use a GTX1080Ti, and the generators and the disriminators was different in different data sets.\<br>
+For MNIST, the time of every 10 thousand iteration is about 120s\<br>
+For cifar10, the time of every 10 thousand iteration is about 170s\<br>
+For animal data set, the time of every 10 thousand iteration is about 2700s
 # results 
-![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom110000.jpg)
+![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom0.jpg)
+![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom50000.jpg)
+![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom100000.jpg)
 
