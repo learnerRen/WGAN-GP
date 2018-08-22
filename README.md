@@ -1,7 +1,11 @@
 # WGAN-GP
+## artircles
+WGAN: [Wasserstein GAN](https://arxiv.org/abs/1701.07875)
+
+WGAN-GP: [Improved Training of Wasserstein GANs](http://arxiv.org/abs/1704.00028)
 ## Prerequisites
-### python 3.x 
-### tensorflow 1.7 
+- python 3.x 
+- tensorflow 1.7 
 ## take care about the loss
 d_loss = y_generate - y_real <br>
 g_loss = -y_generate <br>
