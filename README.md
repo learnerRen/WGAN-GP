@@ -21,5 +21,5 @@ I use a GTX1080Ti, and the generators and the disriminators was different in dif
 For MNIST, every 10 thousand iteration is about 120s
 For cifar10, every 10 thousand iteration is about 170s
 # results 
-
+![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom110000.jpg)
 
