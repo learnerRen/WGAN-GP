@@ -10,9 +10,7 @@ WGAN-GP: [Improved Training of Wasserstein GANs](http://arxiv.org/abs/1704.00028
 
 ### Train
 ```
-python train_mnist_dcgan.py
-python train_celeba_wgan.py
-python train_cartoon_wgan_gp.py
+python main.py
 ...
 ```
 ## Attention
