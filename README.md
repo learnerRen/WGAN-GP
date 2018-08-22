@@ -23,10 +23,10 @@ d_loss += 10*(sqrt(tf.reduce_sum(square(pen)-1, reduction_indices=[range(1, gene
 ### update times
 update discriminator 5 times, update generator once
 ### optimizer
-Although the author of WGAN advice us to use RMS rather than other optimizer method which use moment, I find it seems that adam(I change the default hyperparameter, and set learning_rate=1e-4, alpha=0.5, beta=0.9) coverge quicker.\<br>
+Although the author of WGAN advice us to use RMSprop rather than other optimizer methods which use momentum, I find it seems that adam(I change the default hyperparameter, and set learning_rate=1e-4, alpha=0.5, beta=0.9) coverge quicker. <br>
 It does not matter if you try RMSprop. Attention: when we minimize g_loss we will not update the parameters in discriminator. Similarly, when we minimize d_loss we will not update the parameters in generator.
 ### noise
-For MNIST and cifar, the number of samples is large, so the noise seems to useless, but for my animal data set(dog and cat almost 15 thousand samples), noise will be helpful.
+For MNIST and cifar, the number of samples is large, so the noise seems to be useless, but for my animal data set(dog and cat almost 15 thousand samples), noise will be helpful.
 ### about the parameter training
 At first, I intend to use the as the parameters of batch_normalization, I do not delete it in order to use is in the future.
 ### Discriminator and generator:
