@@ -1,14 +1,18 @@
 # WGAN-GP
+## Prerequisites
+python 3.x \<br>
+tensorflow 1.7 \<br>
 ## take care about the loss
-d_loss = y_generate - y_real
-g_loss = -y_generate
+d_loss = y_generate - y_real\<br>
+g_loss = -y_generate\<br>
 ## penalty
-pen = gradient of interpolates(x - randondom_uniform*difference(x-x_generate))
-d_loss += 10*(sqrt(tf.reduce_sum(square(pen)-1, reduction_indices=[range(1, generate_dim)])**2
+pen = gradient of interpolates(x - randondom_uniform*difference(x-x_generate))\<br>
+d_loss += 10*(sqrt(tf.reduce_sum(square(pen)-1, reduction_indices=[range(1, generate_dim)])**2\<br>
 ## update times
 update discriminator 5 times, update generator once
 ## optimizer
-Although the author of WGAN advice us to use RMS rather than other optimizer method which use moment, I find it seems that adam(I change the default hyperparameter, and set learning_rate=1e-4, alpha=0.5, beta=0.9) coverge quicker. It does not matter if you try RMSprop. Attention: when we minimize g_loss we will not update the parameters in discriminator. Similarly, when we minimize d_loss we will not update the parameters in generator.
+Although the author of WGAN advice us to use RMS rather than other optimizer method which use moment, I find it seems that adam(I change the default hyperparameter, and set learning_rate=1e-4, alpha=0.5, beta=0.9) coverge quicker.\<br>
+It does not matter if you try RMSprop. Attention: when we minimize g_loss we will not update the parameters in discriminator. Similarly, when we minimize d_loss we will not update the parameters in generator.
 ## noise
 For MNIST and cifar, the number of samples is large, so the noise seems to useless, but for my animal data set(dog and cat almost 15 thousand samples), noise will be helpful.
 ## about the parameter training
@@ -24,5 +28,5 @@ For animal data set, the time of every 10 thousand iteration is about 2700s
 # results 
 ![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom0.jpg)
 ![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom50000.jpg)
-![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom100000.jpg)
+![image](https://github.com/learnerRen/WGAN-GP/blob/master/WGAN_MNIST/image_out/random_image/ramdom110000.jpg)
 
